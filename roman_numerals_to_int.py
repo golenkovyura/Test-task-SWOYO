@@ -1,4 +1,4 @@
-import re
+from re import match
 
 
 def is_roman_number(number: str) -> bool:
@@ -6,7 +6,7 @@ def is_roman_number(number: str) -> bool:
     Функция проверки корректности записи римского числа.
     """
     reg_exp = r'^M{0,3}(CM|CD|D?C{0,3})?(XC|XL|L?X{0,3})?(IX|IV|V?I{0,3})?$'
-    if re.match(reg_exp, number) and number:
+    if match(reg_exp, number) and number:
         return True
     return False
 
